@@ -1,0 +1,33 @@
+<header>
+    <a href="/" class="logo">CodariaDev</a>
+  
+    <div class="menuhamb" [class.active]="menuAtivo" (click)="toggleMenu()">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  
+    <div class="menu" [class.active]="menuAtivo">
+      <a href="#" (click)="fecharMenu('inicio')">Inicio</a>
+      <a href="#" (click)="fecharMenu('quem-sou')">Quem sou</a>
+      <a href="#" (click)="fecharMenu('habilidades')">Habilidades</a>
+      <a href="#" (click)="fecharMenu('projetos')">Projetos</a>
+    </div>
+    <div class="botaocontato">
+      <button class="animated-button" disabled="true">
+        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+        <span class="text">Contato</span>
+        <span class="circle"></span>
+        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  

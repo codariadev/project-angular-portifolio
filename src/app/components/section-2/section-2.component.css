@@ -1,0 +1,46 @@
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    font-family: "Julius Sans One", sans-serif;
+    width: 80%;
+    color: white;
+    h1{
+        font-size: 2.5em;
+        font-weight: 400;
+    }
+    p{
+
+        letter-spacing: .2em;
+        text-align: center;
+        line-height: 3em;
+        font-weight: 500;
+    }
+}
+@media (max-width: 900px){
+    .container{
+        width: 80%;
+        text-align: center;
+        gap: 2em;
+
+        h1{
+            font-size: 1.8em;
+            letter-spacing: .1em;
+        }
+        p{
+            font-size: 1.0em;
+            width: 100%;
+            letter-spacing: .01em;
+            word-spacing: .01em;
+        }
+    }
+}

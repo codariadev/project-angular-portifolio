@@ -1,0 +1,69 @@
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Quicksand", sans-serif;
+    
+    h1{
+        font-weight: 700;
+        font-size: 2.3em;
+        padding: .5em 0;
+        color: white;
+        font-family: "National Park", sans-serif;
+    }
+    p{
+        text-align: center;
+        width: 50%;
+    }
+    .img-banner{
+        width: 10em;
+        height: auto;
+        border-radius: 50%;
+    }
+    .sub-about{
+        color: #62affb;
+        text-shadow: black 0px 0px 1px;
+        font-weight: 500;
+        font-size: 1.1em;
+    }
+    .about{
+        padding: 5em 0;
+        font-weight: 300;
+        font-size: 1.2em;
+        color: white;
+        word-spacing: .3em;
+        letter-spacing: .2em;
+        text-shadow: #62affb 0px 0px 2px;
+    }
+}
+
+@media (max-width: 900px){
+    .container{
+        width: 80%;
+        text-align: center;
+        gap: 2em;
+        padding-top: 8em;
+        
+        h1{
+            font-size: 1.8em;
+        }
+        p{
+            font-size: 1.1em;
+            width: 100%;
+        }
+        .bottom-banner{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .about{
+        width: 100%;
+        overflow-y: hidden;
+    }
+}
