@@ -6,7 +6,7 @@
     gap: 5em;
     font-family: "Julius Sans One", sans-serif;
     color: white;
-    min-height: 100vh;
+    min-height: var(--full-height);
 }
 .container {
   margin-top: 10vh;
@@ -67,7 +67,7 @@
 }
 @media (max-width: 900px) {
   .section {
-    min-height: 100vh;
+    min-height: var(--full-height);
     padding: 20px;
     display: flex;
     flex-direction: column;
