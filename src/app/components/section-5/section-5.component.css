@@ -1,0 +1,386 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10em;
+  width: 80%;
+}
+
+.filtro {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  background-color: none;
+  cursor: pointer;
+
+  span {
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.505);
+    height: 3em;
+    width: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "National Park", sans-serif;
+    font-weight: 300;
+    transition: background-color 0.3s ease;
+  }
+
+  span:hover {
+    background-color: rgb(87, 87, 87);
+    border: 1px solid rgb(87, 87, 87);
+  }
+}
+
+.gridprojetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 1.5em;
+}
+
+.card {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  width: 380px;
+  margin: 0 auto;
+  border: 0.2px solid rgba(152, 152, 152, 0.429);
+  border-radius: 1.1em;
+  padding: 15px;
+
+  &:hover .hovertext {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+  }
+
+  &:hover .thumbnail {
+    opacity: 0.1;
+    cursor: pointer;
+  }
+}
+
+.hovertext {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1.1em;
+  transition: opacity 0.3s ease;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "National Park", sans-serif;
+  font-weight: 300;
+  width: 78%;
+}
+
+.githubicon {
+  font-size: 2.2em;
+  color: white;
+  transition: font-size 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    font-size: 2.8em;
+    overflow: hidden;
+  }
+}
+
+#icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal {
+  position: fixed;
+  z-index: 101;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8),
+    inset 0 0 10px rgba(255, 255, 255, 0.02);
+
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "National Park", sans-serif;
+  overflow-y: auto;
+
+  &.image-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    width: auto;
+    max-width: 90%;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  svg {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    fill: white;
+  }
+
+  & {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    font-size: 2em;
+  }
+}
+
+.description {
+  font-weight: 300;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.descriptionChallenge {
+  font-weight: 300;
+  text-align: left;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+
+.modal-body img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2em 0;
+}
+
+.galleryImg {
+  height: 200px;
+  width: auto;
+  display: flex;
+  cursor: pointer;
+}
+
+.expanded-image {
+  display: flex;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 0;
+    margin: 0;
+  }
+
+  .modal {
+    position: fixed;
+  z-index: 101;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  width: 70%;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8),
+    inset 0 0 10px rgba(255, 255, 255, 0.02);
+
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "National Park", sans-serif;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    
+
+    &.image-modal {
+       display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    max-width: 90%;
+    height: auto;
+    width: 100%;
+    }
+
+    .modal-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      padding: 1em 0;
+      gap: 0.5em;
+      a {
+        color: white;
+      }
+    }
+  }
+  .tools{
+    font-size: 2em;
+    display: flex;
+    gap: 1em;
+    padding: .4em 0;
+  }
+
+  .descriptionChallenge {
+    display: flex;
+    align-items: center;
+    margin: 2em;
+    padding: .8em;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1),
+      inset 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 2em;
+    margin-bottom: 2em;
+
+    strong {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.449);
+      width: 80%;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .gallery {
+    width: 100%;
+    figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      img {
+        width: 90%;
+      }
+    }
+  }
+  .modal-header,
+  .modal-body,
+  .modal-footer,
+  .galleryContainer,
+  .description,
+  .descriptionChallenge {
+    height: auto;
+    overflow: visible;
+  }
+  .gallery {
+    flex-wrap: wrap;
+  }
+}

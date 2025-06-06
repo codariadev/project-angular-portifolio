@@ -1,15 +1,5 @@
-.section {
-  display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5em;
-    font-family: "Julius Sans One", sans-serif;
-    color: white;
-    min-height: var(--full-height);
-}
 .container {
-  margin-top: 10vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,8 +10,9 @@
 .cards{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  width: 80%;
+  height: auto;
   
 }
 .card {
@@ -30,6 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-size: 26px;
   font-weight: 700;
   text-align: center;
@@ -37,7 +29,7 @@
   padding: 30px 10px;
   color: white;
   border-radius: 45px;
-  width: 350px;
+  max-width: 350px;
   flex-grow: 1;
 
   .desc{
@@ -72,6 +64,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 
     h1{
       text-align: center;
@@ -82,6 +75,7 @@
       font-weight: 400;
     }
   }
+
   .cards{
     width: 100%;
   }

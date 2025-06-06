@@ -1,9 +1,4 @@
-.section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: var(--full-height);
-}
+
 .container{
     margin-top: 10vh;
     display: flex;

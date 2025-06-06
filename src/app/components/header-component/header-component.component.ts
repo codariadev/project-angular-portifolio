@@ -28,6 +28,14 @@ export class HeaderComponentComponent {
     }
   }
 
+  whatsapp(event: MouseEvent): void {
+  event.preventDefault(); // evita comportamento padrão
+  const numero = '5548933804333'; // número com DDI + DDD (corrigido com 55)
+  const mensagem = encodeURIComponent('Olá! Gostaria de mais informações.');
+  const url = `https://wa.me/${numero}?text=${mensagem}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
+
   @ViewChild('menu') menu!: ElementRef;
 
   roll() {
