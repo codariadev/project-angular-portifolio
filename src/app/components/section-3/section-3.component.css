@@ -1,3 +1,13 @@
+.section {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    font-family: "Julius Sans One", sans-serif;
+    color: white;
+    min-height: var(--full-height);
+}
 .container {
 
   display: flex;

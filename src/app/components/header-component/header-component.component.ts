@@ -12,6 +12,11 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class HeaderComponentComponent {
   menuAtivo: boolean = false;
 
+  whatsapp() {
+    window.open('https://wa.me/+5548933804333', '_blank');
+  }
+  
+
   toggleMenu() {
     this.menuAtivo = !this.menuAtivo;
     console.log('Menu ativo:', this.menuAtivo);
