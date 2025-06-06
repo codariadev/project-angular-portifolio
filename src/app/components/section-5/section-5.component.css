@@ -168,6 +168,12 @@
     max-width: 90%;
   }
 }
+ .tools{
+    font-size: 2em;
+    display: flex;
+    gap: 1em;
+    padding: .4em 0;
+  }
 
 .modal-header {
   display: flex;
