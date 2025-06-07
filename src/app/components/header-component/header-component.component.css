@@ -47,7 +47,7 @@ header {
 
 .menu {
   display: flex;
-  gap: 50px;
+  gap: 1em;
 }
 
 .menu a {
@@ -66,8 +66,7 @@ header {
   align-items: center;
   gap: 4px;
   padding: 6px 30px;
-  border: 4px solid;
-  border-color: transparent;
+  border: 4px solid transparent;
   font-size: 16px;
   background-color: inherit;
   border-radius: 100px;
@@ -118,7 +117,7 @@ header {
 .animated-button:hover {
   box-shadow: 0 0 0 12px transparent;
   color: white;
-  text-shadow: 1px 1px 1px #212121 ;
+  text-shadow: 1px 1px 1px #212121;
   border-radius: 12px;
 }
 
@@ -127,7 +126,9 @@ header {
 }
 
 .animated-button:hover .arr-2 {
-  left: 16px;
+  left: 20%;
+  top: 50%;
+  transform: translate(-50%, -35%);
 }
 
 .animated-button:hover .text {
@@ -138,19 +139,15 @@ header {
   fill: #212121;
 }
 
-.animated-button:active {
-  scale: 0.95;
-  box-shadow: 0 0 0 4px greenyellow;
-}
-
 .animated-button:hover .circle {
   width: 220px;
   height: 220px;
   opacity: 1;
 }
 
-.botao-mobile {
-  display: none;
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
 }
 
 @media (max-width: 900px) {
@@ -158,56 +155,56 @@ header {
     display: none;
   }
 
-  .botao-mobile {
+  .botaocontato {
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 80px;
-    height: 80px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    overflow: hidden;
-    transition-duration: 0.3s;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-    background-color: #00d757;
     bottom: 0;
     right: 0;
-    margin: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #00d757;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     animation: wpp 2s infinite;
+    z-index: 999;
+    overflow: hidden;
+    margin: 2em;
   }
 
-  .sign {
+  .botaocontato .animated-button {
+    padding: 0;
     width: 100%;
-    transition-duration: 0.3s;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .sign svg {
-    width: 45px;
+  .botaocontato .animated-button svg {
+    display: none;
   }
 
-  .sign svg path {
+  .botaocontato .animated-button .arr-2 {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
     fill: white;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-35%, -40%);
   }
 
-  .text {
-    position: absolute;
-    right: 0%;
-    width: 0%;
-    opacity: 0;
-    color: white;
-    font-size: 1.2em;
-    font-weight: 600;
-    transition-duration: 0.3s;
-  }
-
-
-  .botao-mobile:active {
-    transform: translate(2px, 2px);
+  .botaocontato .animated-button .arr-1,
+  .botaocontato .animated-button .text,
+  .botaocontato .animated-button .circle {
+    display: none;
   }
 
   @keyframes wpp {
@@ -215,12 +212,10 @@ header {
       transform: scale(1);
       box-shadow: 0 0 0 0 rgba(0, 215, 87, 0.7);
     }
-
     70% {
       transform: scale(1.05);
       box-shadow: 0 0 0 10px rgba(0, 215, 87, 0);
     }
-
     100% {
       transform: scale(1);
       box-shadow: 0 0 0 0 rgba(0, 215, 87, 0);
@@ -259,12 +254,11 @@ header {
 
   .menu a:hover {
     color: #62affb;
-    text-shadow: #dee2e6 0px 0px 3px;
+    text-shadow: white 0px 0px 1.5px;
     font-weight: 800;
     font-size: 30px;
-    transition: 0.3s ease;
     letter-spacing: 6px;
-    text-shadow: white 0px 0px 1.5px;
+    transition: 0.3s ease;
   }
 
   .menuhamb {

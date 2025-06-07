@@ -1,119 +1,135 @@
 <section class="section" id="desafios">
-  <div class="container">
+  <main class="container">
     <h1>Desafios</h1>
-  </div>
 
-  <nav class="filtro">
-    <span
-      *ngFor="let category of categories"
-      (click)="setCategory(category)"
-      [class.active]="selectedCategory === category"
-      >{{ category }}</span
-    >
-  </nav>
+    <nav class="filtro">
+      <span
+        *ngFor="let category of categories"
+        (click)="setCategory(category)"
+        [class.active]="selectedCategory === category"
+        >{{ category }}</span
+      >
+    </nav>
 
-  <main class="gridprojetos">
-    <ng-container *ngFor="let challenge of filteredChallenges">
-      <article class="card" (click)="openModal(challenge)">
-        <figure>
-          <img
-            [src]="challenge.thumbnail"
-            [alt]="challenge.title"
-            class="thumbnail"
-          />
-          <figcaption class="hovertext">Abrir</figcaption>
-        </figure>
+    <main class="gridprojetos">
+      <ng-container *ngFor="let challenge of filteredChallenges">
+        <article class="card" (click)="openModal(challenge)">
+          <figure>
+            <img
+              [src]="challenge.thumbnail"
+              [alt]="challenge.title"
+              class="thumbnail"
+            />
+            <figcaption class="hovertext">Abrir</figcaption>
+          </figure>
 
-        <section class="card-content">
-          <div class="content">
-            <h3>{{ challenge.title }}</h3>
-            <p>{{ challenge.description }}</p>
-          </div>
-          <a
-            class="githubicon"
-            [href]="challenge.linkgithub"
-            target="_blank"
-            (click)="$event.stopPropagation()"
-            aria-label="Link para GitHub"
-          >
-            <i id="icon" class="fa-brands fa-github"></i>
-          </a>
-        </section>
-      </article>
-    </ng-container>
-  </main>
+          <section class="card-content">
+            <header class="content">
+              <h3>{{ challenge.title }}</h3>
+              <p>{{ challenge.description }}</p>
+            </header>
+            <a
+              class="githubicon"
+              [href]="challenge.linkgithub"
+              target="_blank"
+              (click)="$event.stopPropagation()"
+              aria-label="Link para GitHub"
+            >
+              <i id="icon" class="fa-brands fa-github"></i>
+            </a>
+          </section>
+        </article>
+      </ng-container>
+    </main>
 
-  <div class="modal-backdrop" *ngIf="modalOpen" (click)="closeModal()"></div>
+    <div class="modal-backdrop" *ngIf="modalOpen" (click)="closeModal()"></div>
 
-  <dialog class="modal" *ngIf="modalOpen" style="color: white" open>
-    <button class="close-button" (click)="closeModal()" aria-label="Fechar">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path
-          d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
-        />
-      </svg>
-    </button>
-
-    <header class="modal-header">
-      <h1>{{ selectedChallente.title }}</h1>
-      <p>
-        Empresa: <strong>{{ selectedChallente.company }}</strong><br />
-        <a [href]="selectedChallente.companyLink" target="_blank">{{
-          selectedChallente.companyLink
-        }}</a>
-      </p>
-      <div class="tools">
-        <i style="color: rgb(120, 120, 255)" class="fa-brands fa-react"></i>
-        <i style="color: rgb(148, 148, 254)" class="fa-brands fa-css3"></i>
-      </div>
-    </header>
-
-    <article class="description">
-      <p>{{ selectedChallente.companyResume }}</p>
-    </article>
-
-    <article class="descriptionChallenge">
-      <strong>Desafio: </strong>
-      <p> {{ selectedChallente.challenge }}</p>
-      <strong>Requisitos: </strong>
-      <p>{{ selectedChallente.challengeRequire }}</p>
-
-      <p>{{selectedChallente.challengeObs}}</p>
-    </article>
-    
-
-    <section *ngIf="selectedChallente?.gallery" class="galleryContainer">
-      <h2>Resultado Visual:</h2>
-      <div class="gallery">
-        <figure *ngFor="let img of selectedChallente.gallery">
-          <img
-            [src]="img"
-            [alt]="selectedChallente.title"
-            class="galleryImg"
-            (click)="openImageModal(img)"
-          />
-        </figure>
-      </div>
-    </section>
-
-    <footer class="modal-footer">
-      <a [href]="selectedChallente.challengeLink" target="_blank">Repo Desafio</a>
-      <a [href]="selectedChallente.linkgithub" target="_blank">Ver no GitHub</a>
-    </footer>
-  </dialog>
-
-  <div class="modal-backdrop" *ngIf="imageModalOpen" (click)="closeImageModal()"></div>
-
-  <dialog class="modal image-modal" *ngIf="imageModalOpen" open>
-    <header class="image-header">
-      <button class="close-button" (click)="closeImageModal()" aria-label="Fechar imagem">
+    <dialog class="modal" *ngIf="modalOpen" style="color: white" open>
+      <button class="close-button" (click)="closeModal()" aria-label="Fechar">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path
             d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
           />
         </svg>
       </button>
-    </header>
-    <img [src]="selectedImage" alt="Imagem Expandida" class="expanded-image" />
-  </dialog>
+
+      <header class="modal-header">
+        <h1>{{ selectedChallente.title }}</h1>
+        <p>
+          Empresa: <strong>{{ selectedChallente.company }}</strong
+          ><br />
+          <a [href]="selectedChallente.companyLink" target="_blank">{{
+            selectedChallente.companyLink
+          }}</a>
+        </p>
+        <figure class="tools">
+          <i style="color: rgb(120, 120, 255)" class="fa-brands fa-react"></i>
+          <i style="color: rgb(148, 148, 254)" class="fa-brands fa-css3"></i>
+        </figure>
+      </header>
+
+      <article class="description">
+        <p>{{ selectedChallente.companyResume }}</p>
+      </article>
+
+      <article class="descriptionChallenge">
+        <strong>Desafio: </strong>
+        <p>{{ selectedChallente.challenge }}</p>
+        <strong>Requisitos: </strong>
+        <p>{{ selectedChallente.challengeRequire }}</p>
+
+        <p>{{ selectedChallente.challengeObs }}</p>
+      </article>
+
+      <section *ngIf="selectedChallente?.gallery" class="galleryContainer">
+        <h2>Resultado Visual:</h2>
+        <section class="gallery">
+          <figure *ngFor="let img of selectedChallente.gallery">
+            <img
+              [src]="img"
+              [alt]="selectedChallente.title"
+              class="galleryImg"
+              (click)="openImageModal(img)"
+            />
+          </figure>
+        </section>
+      </section>
+
+      <footer class="modal-footer">
+        <a [href]="selectedChallente.challengeLink" target="_blank"
+          >Repo Desafio</a
+        >
+        <a [href]="selectedChallente.linkgithub" target="_blank"
+          >Ver no GitHub</a
+        >
+      </footer>
+    </dialog>
+
+    <section
+      class="modal-backdrop"
+      *ngIf="imageModalOpen"
+      (click)="closeImageModal()"
+    ></section>
+
+    <dialog class="modal image-modal" *ngIf="imageModalOpen" open>
+      <header class="image-header">
+        <button
+          class="close-button"
+          (click)="closeImageModal()"
+          aria-label="Fechar imagem"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+            />
+          </svg>
+        </button>
+      </header>
+      <img
+        [src]="selectedImage"
+        alt="Imagem Expandida"
+        class="expanded-image"
+      />
+    </dialog>
+  </main>
 </section>

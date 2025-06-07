@@ -1,21 +1,4 @@
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5em;
-  font-family: "Julius Sans One", sans-serif;
-  color: white;
-  min-height: var(--full-height);
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10em;
-  width: 80%;
-}
-.filtro{
+.filtro {
   width: 80%;
   display: flex;
   justify-content: center;
@@ -23,7 +6,7 @@
   background-color: none;
   cursor: pointer;
 
-  span{
+  span {
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.505);
     height: 3em;
@@ -36,10 +19,9 @@
     transition: background-color 0.3s ease;
   }
 
-  span:hover{
+  span:hover {
     background-color: rgb(87, 87, 87);
     border: 1px solid rgb(87, 87, 87);
-    
   }
 }
 .gridprojetos {
@@ -55,13 +37,13 @@
   text-decoration: none;
   position: relative;
   width: 100%;
-  width: 380px;
+  max-width: 380px;
   margin: 0 auto;
   border: 0.2px solid rgba(152, 152, 152, 0.429);
   border-radius: 1.1em;
-  padding: 15px;;
+  padding: 15px;
 }
-.hovertext{
+.hovertext {
   position: absolute;
   top: 40%;
   left: 60%;
@@ -87,28 +69,28 @@
   align-items: flex-end;
   overflow: hidden;
 }
-.content{
+.content {
   display: flex;
-  gap: .5em;
+  gap: 0.5em;
   flex-direction: column;
   justify-content: space-between;
   font-family: "National Park", sans-serif;
   font-weight: 300;
 }
-.githubicon{
+.githubicon {
   font-size: 2.2em;
   color: white;
   transition: font-size 0.3s ease;
   text-decoration: none;
 }
-#icon{
+#icon {
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.vercel-logo{
+.vercel-logo {
   position: absolute;
   top: 28%;
   left: 20%;
@@ -122,25 +104,27 @@
   transition: opacity 0.3s ease;
 }
 
-.card-link:hover .hovertext, .card-link:hover .vercel-logo{
-    opacity: 1;
-    color: white;
-    font-weight: 500;
-    
+.card-link:hover .hovertext,
+.card-link:hover .vercel-logo {
+  opacity: 1;
+  color: white;
+  font-weight: 500;
 }
-.card-link:hover .thumbnail{
-  opacity: .1;
+.card-link:hover .thumbnail {
+  opacity: 0.1;
 }
-.githubicon:hover{
+.githubicon:hover {
   font-size: 2.8em;
   overflow: hidden;
 }
 
-@media (width: 900px){
-  .section{
-    
+@media (width: 900px) {
+  .section {
     padding: 0;
     margin: 0;
   }
+  .gridprojetos {
+    margin: 0;
+    padding: 0;
+  }
 }
-

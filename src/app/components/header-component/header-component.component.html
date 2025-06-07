@@ -1,21 +1,20 @@
 <header>
   <a href="/" class="logo">CodariaDev</a>
 
-  <div class="menuhamb" [class.active]="menuAtivo" (click)="toggleMenu()">
+  <nav class="menuhamb" [class.active]="menuAtivo" (click)="toggleMenu()">
     <div class="line1"></div>
     <div class="line2"></div>
     <div class="line3"></div>
-  </div>
+  </nav>
 
-  <div class="menu" [class.active]="menuAtivo">
+  <nav class="menu" [class.active]="menuAtivo">
     <a href="#" (click)="fecharMenu('inicio')">Inicio</a>
     <a href="#" (click)="fecharMenu('quem-sou')">Quem sou</a>
     <a href="#" (click)="fecharMenu('habilidades')">Habilidades</a>
     <a href="#" (click)="fecharMenu('projetos')">Projetos</a>
     <a href="#" (click)="fecharMenu('desafios')">Desafios</a>
-  </div>
-  <div class="botaocontato">
-    <div class="botaocontato">
+  </nav>
+  <section class="botaocontato">
       <a class="animated-button" (click)="whatsapp($event)">
         <svg
           viewBox="0 0 24 24"
@@ -38,6 +37,5 @@
           ></path>
         </svg>
       </a>
-    </div>
-  </div>
+  </section>
 </header>
