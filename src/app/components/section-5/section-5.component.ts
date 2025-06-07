@@ -45,6 +45,7 @@ export class Section5Component {
       description: 'Uma API de previsão do tempo consumida por um site simples',
       // linkvercel: 'https://frontend-html-glamour.vercel.app/',
       linkgithub: 'https://github.com/codariadev/desafio-st1.git',
+      challengeLink: 'https://github.com/1STi/desafio-frontend.git ',
 
       gallery: [
         './assets/weather_api/weather_api.png',
