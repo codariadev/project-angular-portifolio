@@ -15,9 +15,16 @@ export class Section4Component {
     { title: 'Glamour HTML',
       category: 'HTML',
       thumbnail: 'https://raw.githubusercontent.com/codariadev/frontend-html-glamour/refs/heads/main/thumbnail.png',
-      description: 'Um site básico',
+      description: 'Um site básico para salões de beleza',
       linkvercel: 'https://frontend-html-glamour.vercel.app/',
       linkgithub: 'https://github.com/codariadev/frontend-html-glamour'
+    },
+    { title: 'Gerador de Curriculo',
+      category: 'Angular',
+      thumbnail: 'https://raw.githubusercontent.com/codariadev/curriculo-builder/refs/heads/main/thumbnail.png',
+      description: 'Com dois templates simples, direto ao ponto!',
+      linkvercel: 'https://curriculo-builder.vercel.app/',
+      linkgithub: 'https://github.com/codariadev/curriculo-builder.git'
     },
 
   ];
