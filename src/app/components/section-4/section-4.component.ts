@@ -28,7 +28,7 @@ export class Section4Component {
     },
     { title: 'App de orçamentos para pinturas (Em desenvolvimento)',
       category: 'React Native',
-      thumbnail: 'https://raw.githubusercontent.com/codariadev/pintura-app/refs/heads/master/WhatsApp%20Image%202025-07-19%20at%2012.28.11.jpeg',
+      thumbnail: 'https://raw.githubusercontent.com/codariadev/pintura-app/refs/heads/master/thumbnail.jpeg',
       description: 'Aplicativo mobile para orçamentos e gestão de serviços de pintura, desenvolvido com React Native, Expo e Firebase.',
       linkvercel: 'https://github.com/codariadev/pintura-app.git',
       linkgithub: 'https://github.com/codariadev/pintura-app.git'
