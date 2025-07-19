@@ -26,6 +26,13 @@ export class Section4Component {
       linkvercel: 'https://curriculo-builder.vercel.app/',
       linkgithub: 'https://github.com/codariadev/curriculo-builder.git'
     },
+    { title: 'App de orçamentos para pinturas (Em desenvolvimento)',
+      category: 'React Native',
+      thumbnail: 'https://raw.githubusercontent.com/codariadev/pintura-app/refs/heads/master/WhatsApp%20Image%202025-07-19%20at%2012.28.11.jpeg',
+      description: 'Aplicativo mobile para orçamentos e gestão de serviços de pintura, desenvolvido com React Native, Expo e Firebase.',
+      linkvercel: 'https://github.com/codariadev/pintura-app.git',
+      linkgithub: 'https://github.com/codariadev/pintura-app.git'
+    },
 
   ];
 

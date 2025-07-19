@@ -79,6 +79,7 @@
 }
 .content {
   display: flex;
+  width: 80%;
   gap: 0.5em;
   flex-direction: column;
   justify-content: space-between;
@@ -135,4 +136,24 @@
     margin: 0;
     padding: 0;
   }
+}
+.card-link.no-hover:hover .hovertext,
+.card-link.no-hover:hover .vercel-logo,
+.card-link.no-hover:hover .thumbnail {
+  opacity: 1 !important;
+  pointer-events: none;
+  cursor: default;
+}
+
+.card-link.no-hover .hovertext,
+.card-link.no-hover .vercel-logo {
+  display: none !important;
+  pointer-events: none;
+  cursor: default;
+}
+
+.card-link.no-hover:hover .thumbnail {
+  opacity: 1 !important;
+  cursor: default;
+  pointer-events: none;
 }
