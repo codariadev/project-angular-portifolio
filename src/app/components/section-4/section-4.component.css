@@ -47,14 +47,14 @@
   justify-content: space-between;
   .categoryCard{
     font-weight: 700;
-    padding: .5em 0;
+    padding: 1em 0;
     text-align: center;
   }
 }
 .hovertext {
   position: absolute;
-  top: 40%;
-  left: 60%;
+  top: 25%;
+  left: 50%;
   z-index: 100;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -76,6 +76,14 @@
   justify-content: space-between;
   align-items: flex-end;
   overflow: hidden;
+  h3{
+    text-align: center;
+  }
+  h5{
+    font-weight: 100;
+    color: #ccc;
+    text-align: center;
+  }
 }
 .content {
   display: flex;
